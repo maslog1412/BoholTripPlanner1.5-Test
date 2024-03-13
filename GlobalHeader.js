@@ -5,7 +5,7 @@ import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import globalHeaderStyles from './GlobalHeaderstyles'; // Adjust the path based on the actual location of your styles file
 
-const GlobalHeader = () => {
+const GlobalHeader = ({ showSearchIcon }) => {
   return (
     <SafeAreaView style={globalHeaderStyles.header}>
       <View style={globalHeaderStyles.logoContainer}>
@@ -13,18 +13,20 @@ const GlobalHeader = () => {
         <Text style={globalHeaderStyles.logoText}>Bohol Trip Planner</Text>
       </View>
 
-      <Pressable onPress={() => {}}>
-        {({ pressed }) => (
-          <View style={globalHeaderStyles.iconContainer}>
-            <FontAwesome5Icon
-              name="search"
-              size={24}
-              color={pressed ? '#555' : '#000'}
-              style={globalHeaderStyles.searchIcon}
-            />
-          </View>
-        )}
-      </Pressable>
+      {showSearchIcon && (
+        <Pressable onPress={() => {}}>
+          {({ pressed }) => (
+            <View style={globalHeaderStyles.iconContainer}>
+              <FontAwesome5Icon
+                name="search"
+                size={24}
+                color={pressed ? '#555' : '#000'}
+                style={globalHeaderStyles.searchIcon}
+              />
+            </View>
+          )}
+        </Pressable>
+      )}
     </SafeAreaView>
   );
 };

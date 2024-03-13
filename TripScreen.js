@@ -6,7 +6,7 @@ import GlobalHeader from './GlobalHeader'; // Adjust the path based on the actua
 const TripScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
-      <GlobalHeader />
+      <GlobalHeader showSearchIcon={false} />
       <View style={styles.container}>
         <Text style={styles.text}>Welcome to Bohol Trip Planner!</Text>
       </View>
