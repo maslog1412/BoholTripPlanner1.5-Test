@@ -1,12 +1,12 @@
 // Header.js
 import React from 'react';
-import { View, Text, Pressable, TextInput } from 'react-native';
+import { View, Text, Pressable, TextInput, SafeAreaView } from 'react-native';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import { styles } from './styles'; // Import styles
 
 const Header = () => {
   return (
-    <View style={styles.header}>
+    <SafeAreaView style={styles.header}>
       <View style={styles.logoContainer}>
         <FontAwesome5Icon name="walking" size={40} color="green" style={styles.youtubeIcon} />
         <Text style={styles.logoText}>Bohol Trip Planner</Text>
@@ -24,7 +24,7 @@ const Header = () => {
           </View>
         )}
       </Pressable>
-    </View>
+    </SafeAreaView>
   );
 };
 
