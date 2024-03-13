@@ -1,13 +1,7 @@
 // styles.js
 import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    padding: 10,
-    paddingTop: 10,
-  },
+export const globalHeaderStyles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -25,5 +19,8 @@ export const styles = StyleSheet.create({
   iconContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  searchIcon: {
+    marginRight: 10,
   },
 });
