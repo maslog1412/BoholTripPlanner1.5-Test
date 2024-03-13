@@ -7,6 +7,7 @@ const globalHeaderStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 10,
+    padding: 10,
   },
   logoContainer: {
     flexDirection: 'row',
